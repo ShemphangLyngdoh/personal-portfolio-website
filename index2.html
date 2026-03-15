@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Tech Store</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:#111;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+.cart{
+font-size:18px;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:50px;
+background:linear-gradient(120deg,#00e5ff,#0072ff);
+color:black;
+}
+
+.hero h1{
+font-size:36px;
+}
+
+/* PRODUCTS GRID */
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:30px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+/* PRODUCT CARD */
+
+.product{
+background:#1c1c1c;
+border-radius:12px;
+padding:20px;
+text-align:center;
+transition:0.3s;
+box-shadow:0 5px 15px rgba(0,0,0,0.5);
+position:relative;
+}
+
+.product:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 30px rgba(0,0,0,0.7);
+}
+
+.product img{
+width:100px;
+height:100px;
+object-fit:contain;
+margin-bottom:10px;
+}
+
+.rating{
+color:gold;
+margin:5px 0;
+}
+
+.price{
+color:#00e5ff;
+font-weight:bold;
+margin-bottom:5px;
+}
+
+.badge{
+position:absolute;
+top:10px;
+left:10px;
+background:red;
+padding:4px 7px;
+font-size:12px;
+border-radius:4px;
+}
+
+.badge.new{
+background:#00e5ff;
+color:black;
+}
+
+/* BUTTON */
+
+button{
+background:#00e5ff;
+border:none;
+padding:8px 14px;
+border-radius:6px;
+cursor:pointer;
+margin:4px;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.back{
+display:block;
+text-align:center;
+margin-top:40px;
+color:#00e5ff;
+text-decoration:none;
+font-size:18px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">🛒 My Tech Store</div>
+
+<div class="cart">
+Cart (<span id="cartCount">0</span>)
+</div>
+
+</header>
+
+
+<div class="hero">
+
+<h1>Featured Tech Products</h1>
+<p>Best gadgets for developers</p>
+
+</div>
+
+
+<div class="container">
+
+<div class="products">
+
+<div class="product">
+<div class="badge">SALE</div>
+<h3>Wireless Headphones</h3>
+<img src="https://cdn-icons-png.flaticon.com/512/869/869869.png">
+<div class="rating">⭐⭐⭐⭐⭐</div>
+<p class="price">₹1999</p>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="wishlist()">❤️</button>
+</div>
+
+
+<div class="product">
+<div class="badge new">NEW</div>
+<h3>Smart Watch</h3>
+<img src="https://cdn-icons-png.flaticon.com/512/2920/2920244.png">
+<div class="rating">⭐⭐⭐⭐</div>
+<p class="price">₹2499</p>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="wishlist()">❤️</button>
+</div>
+
+
+<div class="product">
+<h3>Bluetooth Speaker</h3>
+<img src="https://cdn-icons-png.flaticon.com/512/3659/3659899.png">
+<div class="rating">⭐⭐⭐⭐</div>
+<p class="price">₹1499</p>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="wishlist()">❤️</button>
+</div>
+
+
+<div class="product">
+<h3>Gaming Mouse</h3>
+<img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png">
+<div class="rating">⭐⭐⭐⭐</div>
+<p class="price">₹899</p>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="wishlist()">❤️</button>
+</div>
+
+
+<div class="product">
+<h3>Mechanical Keyboard</h3>
+<img src="https://cdn-icons-png.flaticon.com/512/1006/1006555.png">
+<div class="rating">⭐⭐⭐⭐⭐</div>
+<p class="price">₹2999</p>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="wishlist()">❤️</button>
+</div>
+
+
+<div class="product">
+<h3>Wireless Earbuds</h3>
+<img src="https://cdn-icons-png.flaticon.com/512/888/888879.png">
+<div class="rating">⭐⭐⭐⭐</div>
+<p class="price">₹1799</p>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="wishlist()">❤️</button>
+</div>
+
+
+<div class="product">
+<h3>HD Monitor</h3>
+<img src="https://cdn-icons-png.flaticon.com/512/3474/3474360.png">
+<div class="rating">⭐⭐⭐⭐⭐</div>
+<p class="price">₹8999</p>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="wishlist()">❤️</button>
+</div>
+
+
+<div class="product">
+<h3>USB Microphone</h3>
+<img src="https://cdn-icons-png.flaticon.com/512/727/727245.png">
+<div class="rating">⭐⭐⭐⭐</div>
+<p class="price">₹2499</p>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="wishlist()">❤️</button>
+</div>
+
+
+<div class="product">
+<h3>Laptop Stand</h3>
+<img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
+<div class="rating">⭐⭐⭐⭐</div>
+<p class="price">₹799</p>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="wishlist()">❤️</button>
+</div>
+
+
+<div class="product">
+<h3>HD Webcam</h3>
+<img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png">
+<div class="rating">⭐⭐⭐⭐</div>
+<p class="price">₹1499</p>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="wishlist()">❤️</button>
+</div>
+
+
+<div class="product">
+<h3>Android Tablet</h3>
+<img src="https://cdn-icons-png.flaticon.com/512/888/888841.png">
+<div class="rating">⭐⭐⭐⭐</div>
+<p class="price">₹6999</p>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="wishlist()">❤️</button>
+</div>
+
+
+<div class="product">
+<h3>Power Bank</h3>
+<img src="https://cdn-icons-png.flaticon.com/512/3103/3103446.png">
+<div class="rating">⭐⭐⭐⭐</div>
+<p class="price">₹999</p>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="wishlist()">❤️</button>
+</div>
+
+
+</div>
+
+</div>
+
+
+<a href="index.html" class="back">← Back to Portfolio</a>
+
+
+<script>
+
+let cart=0;
+
+function addCart(){
+
+cart++;
+
+document.getElementById("cartCount").innerText=cart;
+
+alert("Item added to cart");
+
+}
+
+function wishlist(){
+
+alert("Added to wishlist");
+
+}
+
+</script>
+
+</body>
+</html>
