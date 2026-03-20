@@ -8,13 +8,14 @@
 
 <title>Shemphang Lyngdoh | Portfolio</title>
 
-<link rel="stylesheet" href="../CSS/style.css">
+<!-- ✅ FIXED PATH -->
+<link rel="stylesheet" href="CSS/style.css">
 
 </head>
 
 <body>
 
-<header>
+<header class="header">
 
 <h1>Shemphang Lyngdoh</h1>
 
@@ -27,17 +28,15 @@
 
 </header>
 
-
 <section id="home" class="hero">
 
 <h2>Hello, I'm a Web Developer</h2>
 
-<p>I build websites and web applications.</p>
+<p id="typing"></p>
 
 <button onclick="scrollToProjects()">View Projects</button>
 
 </section>
-
 
 <section id="about">
 
@@ -48,7 +47,6 @@ I am a BCA student passionate about web development and creating modern websites
 </p>
 
 </section>
-
 
 <section id="projects">
 
@@ -68,21 +66,17 @@ An online store simulation where users can browse products, add items to cart an
 
 </section>
 
-
 <section id="contact">
 
 <h2>Contact</h2>
 
 <input type="text" placeholder="Your Name">
-
 <input type="email" placeholder="Your Email">
-
 <textarea placeholder="Message"></textarea>
 
-<button>Send</button>
+<button onclick="sendMessage()">Send</button>
 
 </section>
-
 
 <footer>
 
@@ -90,8 +84,8 @@ An online store simulation where users can browse products, add items to cart an
 
 </footer>
 
-
-<script src="../Javascript/script.js"></script>
+<!-- ✅ FIXED PATH -->
+<script src="Javascript/script.js"></script>
 
 </body>
 
