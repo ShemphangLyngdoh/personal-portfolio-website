@@ -2,27 +2,18 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>My Tech Store</title>
 
 <style>
-
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0;}
 
 body{
 font-family:'Segoe UI',sans-serif;
 background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 color:white;
 }
-
-/* HEADER */
 
 header{
 display:flex;
@@ -32,16 +23,8 @@ padding:20px 40px;
 background:#111;
 }
 
-.logo{
-font-size:22px;
-font-weight:bold;
-}
-
-.cart{
-font-size:18px;
-}
-
-/* HERO */
+.logo{font-size:22px;font-weight:bold;}
+.cart{font-size:18px;}
 
 .hero{
 text-align:center;
@@ -50,25 +33,13 @@ background:linear-gradient(120deg,#00e5ff,#0072ff);
 color:black;
 }
 
-.hero h1{
-font-size:36px;
-}
-
-/* PRODUCTS GRID */
-
-.container{
-max-width:1200px;
-margin:auto;
-padding:30px;
-}
+.container{max-width:1200px;margin:auto;padding:30px;}
 
 .products{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
 }
-
-/* PRODUCT CARD */
 
 .product{
 background:#1c1c1c;
@@ -92,16 +63,8 @@ object-fit:contain;
 margin-bottom:10px;
 }
 
-.rating{
-color:gold;
-margin:5px 0;
-}
-
-.price{
-color:#00e5ff;
-font-weight:bold;
-margin-bottom:5px;
-}
+.rating{color:gold;margin:5px 0;}
+.price{color:#00e5ff;font-weight:bold;margin-bottom:5px;}
 
 .badge{
 position:absolute;
@@ -118,8 +81,6 @@ background:#00e5ff;
 color:black;
 }
 
-/* BUTTON */
-
 button{
 background:#00e5ff;
 border:none;
@@ -129,9 +90,7 @@ cursor:pointer;
 margin:4px;
 }
 
-button:hover{
-transform:scale(1.05);
-}
+button:hover{transform:scale(1.05);}
 
 .back{
 display:block;
@@ -141,7 +100,6 @@ color:#00e5ff;
 text-decoration:none;
 font-size:18px;
 }
-
 </style>
 
 </head>
@@ -149,178 +107,103 @@ font-size:18px;
 <body>
 
 <header>
-
 <div class="logo">🛒 My Tech Store</div>
-
-<div class="cart">
-Cart (<span id="cartCount">0</span>)
-</div>
-
+<div class="cart">Cart (<span id="cartCount">0</span>)</div>
 </header>
 
-
 <div class="hero">
-
 <h1>Featured Tech Products</h1>
 <p>Best gadgets for developers</p>
-
 </div>
 
-
 <div class="container">
-
 <div class="products">
 
 <div class="product">
 <div class="badge">SALE</div>
 <h3>Wireless Headphones</h3>
-<img src="D:\Downloads\headphones.jpg">
-<div class="rating">⭐⭐⭐⭐⭐</div>
+<img src="images/headphones.jpg">
 <p class="price">₹1999</p>
-<button onclick="addCart()">Add to Cart</button>
-<button onclick="wishlist()">❤️</button>
 </div>
-
 
 <div class="product">
 <div class="badge new">NEW</div>
 <h3>Watch</h3>
-<img src="D:\Downloads\watch.jpg">
-<div class="rating">⭐⭐⭐⭐</div>
+<img src="images/watch.png">
 <p class="price">₹2499</p>
-<button onclick="addCart()">Add to Cart</button>
-<button onclick="wishlist()">❤️</button>
 </div>
-
 
 <div class="product">
 <h3>Bluetooth Speaker</h3>
-<img src="D:\Downloads\speaker.jpg">
-<div class="rating">⭐⭐⭐⭐</div>
+<img src="images/speaker.jpg">
 <p class="price">₹1499</p>
-<button onclick="addCart()">Add to Cart</button>
-<button onclick="wishlist()">❤️</button>
 </div>
-
 
 <div class="product">
 <h3>Gaming Mouse</h3>
-<img src="D:\Downloads\mouse.jpg">
-<div class="rating">⭐⭐⭐⭐</div>
+<img src="images/mouse.jpg">
 <p class="price">₹899</p>
-<button onclick="addCart()">Add to Cart</button>
-<button onclick="wishlist()">❤️</button>
 </div>
-
 
 <div class="product">
 <h3>Mechanical Keyboard</h3>
-<img src="D:\Downloads\keyboard.jpg">
-<div class="rating">⭐⭐⭐⭐⭐</div>
+<img src="images/keyboard.jpg">
 <p class="price">₹2999</p>
-<button onclick="addCart()">Add to Cart</button>
-<button onclick="wishlist()">❤️</button>
 </div>
-
 
 <div class="product">
 <h3>Wireless Earbuds</h3>
-<img src="D:\Downloads\earbuds.jpg">
-<div class="rating">⭐⭐⭐⭐</div>
+<img src="images/earbuds.jpg">
 <p class="price">₹1799</p>
-<button onclick="addCart()">Add to Cart</button>
-<button onclick="wishlist()">❤️</button>
 </div>
-
 
 <div class="product">
 <h3>HD Monitor</h3>
-<img src="D:\Downloads\monitor.jpg">
-<div class="rating">⭐⭐⭐⭐⭐</div>
+<img src="images/monitor.jpg">
 <p class="price">₹8999</p>
-<button onclick="addCart()">Add to Cart</button>
-<button onclick="wishlist()">❤️</button>
 </div>
-
 
 <div class="product">
 <h3>USB Microphone</h3>
-<img src="D:\Downloads\usbmicrophone.jpg">
-<div class="rating">⭐⭐⭐⭐</div>
+<img src="images/usbmicrophone.jpg">
 <p class="price">₹2499</p>
-<button onclick="addCart()">Add to Cart</button>
-<button onclick="wishlist()">❤️</button>
 </div>
-
 
 <div class="product">
-<h3>LaptopStand</h3>
-<img src="D:\Downloads\laptopstand.jpg">
-<div class="rating">⭐⭐⭐⭐</div>
+<h3>Laptop Stand</h3>
+<img src="images/laptopstand.jpg">
 <p class="price">₹799</p>
-<button onclick="addCart()">Add to Cart</button>
-<button onclick="wishlist()">❤️</button>
 </div>
-
 
 <div class="product">
 <h3>HD Webcam</h3>
-<img src="D:\Downloads\webcam.jpg">
-<div class="rating">⭐⭐⭐⭐</div>
+<img src="images/webcam.jpg">
 <p class="price">₹1499</p>
-<button onclick="addCart()">Add to Cart</button>
-<button onclick="wishlist()">❤️</button>
 </div>
-
 
 <div class="product">
 <h3>Android Tablet</h3>
-<img src="D:\Downloads\tablet.jpg">
-<div class="rating">⭐⭐⭐⭐</div>
+<img src="images/tablet.jpg">
 <p class="price">₹6999</p>
-<button onclick="addCart()">Add to Cart</button>
-<button onclick="wishlist()">❤️</button>
 </div>
-
 
 <div class="product">
 <h3>Power Bank</h3>
-<img src="D:\Downloads\powerbank.jpg">
-<div class="rating">⭐⭐⭐⭐</div>
+<img src="images/powerbank.jpg">
 <p class="price">₹999</p>
-<button onclick="addCart()">Add to Cart</button>
-<button onclick="wishlist()">❤️</button>
-</div>
-
-
 </div>
 
 </div>
-
+</div>
 
 <a href="index.html" class="back">← Back to Portfolio</a>
 
-
 <script>
-
 let cart=0;
-
 function addCart(){
-
 cart++;
-
 document.getElementById("cartCount").innerText=cart;
-
-alert("Item added to cart");
-
 }
-
-function wishlist(){
-
-alert("Added to wishlist");
-
-}
-
 </script>
 
 </body>
