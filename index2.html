@@ -63,7 +63,11 @@ object-fit:contain;
 margin-bottom:10px;
 }
 
-.price{color:#00e5ff;font-weight:bold;margin-bottom:5px;}
+.price{
+color:#00e5ff;
+font-weight:bold;
+margin-bottom:5px;
+}
 
 .badge{
 position:absolute;
@@ -89,7 +93,9 @@ cursor:pointer;
 margin:4px;
 }
 
-button:hover{transform:scale(1.05);}
+button:hover{
+transform:scale(1.05);
+}
 
 .back{
 display:block;
@@ -118,78 +124,114 @@ font-size:18px;
 <div class="container">
 <div class="products">
 
+<!-- Headphones -->
 <div class="product">
 <div class="badge">SALE</div>
 <h3>Wireless Headphones</h3>
 <img src="https://shemphanglyngdoh.github.io/personal-portfolio-website/images/headphones.jpg">
 <p class="price">₹1999</p>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="wishlist()">❤️</button>
 </div>
 
+<!-- Watch -->
 <div class="product">
 <div class="badge new">NEW</div>
 <h3>Watch</h3>
 <img src="https://shemphanglyngdoh.github.io/personal-portfolio-website/images/watch.jpg">
 <p class="price">₹2499</p>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="wishlist()">❤️</button>
 </div>
 
+<!-- Speaker -->
 <div class="product">
 <h3>Bluetooth Speaker</h3>
 <img src="https://shemphanglyngdoh.github.io/personal-portfolio-website/images/speaker.jpg">
 <p class="price">₹1499</p>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="wishlist()">❤️</button>
 </div>
 
+<!-- Mouse -->
 <div class="product">
 <h3>Gaming Mouse</h3>
 <img src="https://shemphanglyngdoh.github.io/personal-portfolio-website/images/mouse.jpg">
 <p class="price">₹899</p>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="wishlist()">❤️</button>
 </div>
 
+<!-- Keyboard -->
 <div class="product">
 <h3>Mechanical Keyboard</h3>
 <img src="https://shemphanglyngdoh.github.io/personal-portfolio-website/images/keyboard.jpg">
 <p class="price">₹2999</p>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="wishlist()">❤️</button>
 </div>
 
+<!-- Earbuds -->
 <div class="product">
 <h3>Wireless Earbuds</h3>
 <img src="https://shemphanglyngdoh.github.io/personal-portfolio-website/images/earbuds.jpg">
 <p class="price">₹1799</p>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="wishlist()">❤️</button>
 </div>
 
+<!-- Monitor -->
 <div class="product">
 <h3>HD Monitor</h3>
 <img src="https://shemphanglyngdoh.github.io/personal-portfolio-website/images/monitor.jpg">
 <p class="price">₹8999</p>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="wishlist()">❤️</button>
 </div>
 
+<!-- Microphone -->
 <div class="product">
 <h3>USB Microphone</h3>
 <img src="https://shemphanglyngdoh.github.io/personal-portfolio-website/images/usbmicrophone.jpg">
 <p class="price">₹2499</p>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="wishlist()">❤️</button>
 </div>
 
+<!-- Laptop Stand -->
 <div class="product">
 <h3>Laptop Stand</h3>
 <img src="https://shemphanglyngdoh.github.io/personal-portfolio-website/images/laptopstand.jpg">
 <p class="price">₹799</p>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="wishlist()">❤️</button>
 </div>
 
+<!-- Webcam -->
 <div class="product">
 <h3>HD Webcam</h3>
 <img src="https://shemphanglyngdoh.github.io/personal-portfolio-website/images/webcam.jpg">
 <p class="price">₹1499</p>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="wishlist()">❤️</button>
 </div>
 
+<!-- Tablet -->
 <div class="product">
 <h3>Android Tablet</h3>
 <img src="https://shemphanglyngdoh.github.io/personal-portfolio-website/images/tablet.jpg">
 <p class="price">₹6999</p>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="wishlist()">❤️</button>
 </div>
 
+<!-- Power Bank -->
 <div class="product">
 <h3>Power Bank</h3>
 <img src="https://shemphanglyngdoh.github.io/personal-portfolio-website/images/powerbank.jpg">
 <p class="price">₹999</p>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="wishlist()">❤️</button>
 </div>
 
 </div>
@@ -199,9 +241,15 @@ font-size:18px;
 
 <script>
 let cart=0;
+
 function addCart(){
 cart++;
 document.getElementById("cartCount").innerText=cart;
+alert("Item added to cart");
+}
+
+function wishlist(){
+alert("Added to wishlist");
 }
 </script>
 
